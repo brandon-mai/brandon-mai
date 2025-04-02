@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-![Hit Counter](https://komarev.com/ghpvc/?username=brandon-mai&color=FFA500&style=for-the-badge&label=VIEWS) [![Wakatime Hours Badge](https://wakatime.com/badge/user/137a1655-e7c3-4f3d-a00a-edb94e9bfcf3.svg?style=for-the-badge)](https://wakatime.com/@brandonmai)
+![Hit Counter](https://komarev.com/ghpvc/?username=brandon-mai&color=6F4E37&style=for-the-badge&label=VIEWS) [![Wakatime Hours Badge](https://wakatime.com/badge/user/137a1655-e7c3-4f3d-a00a-edb94e9bfcf3.svg?style=for-the-badge)](https://wakatime.com/@brandonmai)
 
 <!--
 **brandon-mai/brandon-mai** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
