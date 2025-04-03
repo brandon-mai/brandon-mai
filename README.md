@@ -8,7 +8,7 @@
 
 Currently working on whatever I'm fascinated about.
 
-I like Jetbrains Mono a normal amount and live by the motto:
+I strive to live by the motto:
 
 > Don't Think, Just Jam.
 
