@@ -12,15 +12,13 @@
 ---
 
 #### About Me
-
+- 🎵 Music lover.
+- 🩵 Avid Hololive fan.
 - 🍵 Heavy tea and coffee consumer.
-- ▶️ Avid Hololive fan.
-- 🎵 Music lover. My things are JPop, Hi-Tech, and Trance.
-- 🌄 Grass toucher. I love being outside.
-- 😎 Python | R | Data Science | AI.
-- 🤔 Experimenting with system development and frontend development.
+- 🏞 Grass toucher. I love being outside.
 
 #### What I Do
+- 😎 Data Science | AI | experimenting with system and frontend dev.
 - 📚 Research topics that spark my curiosity.
 - 🛠️ Build sometimes useful, sometimes questionable stuffs.
 - 💻 Blog at [my blog](https://vietbaomai.com/). Much appreciated if you can check it out!
