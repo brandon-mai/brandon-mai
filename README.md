@@ -23,7 +23,7 @@
 #### What I Do
 - 📚 Research topics that spark my curiosity.
 - 🛠️ Build sometimes useful, sometimes questionable stuffs.
-- 💻 Blogging at [my blog](https://vietbaomai.com/). Much appreciated if you can check it out!
+- 💻 Blog at [my blog](https://vietbaomai.com/). Much appreciated if you can check it out!
 
 ---
 
