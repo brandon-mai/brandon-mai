@@ -7,7 +7,7 @@
 #### What I Do
 - 😎 Data Science | AI | experimenting with system and frontend dev.
 - 📚 Research topics that spark my curiosity.
-- 🛠️ Build sometimes useful, sometimes questionable stuffs.
+- 🛠️ Build sometimes questionable stuffs.
 - 💻 Blog at [my blog](https://vietbaomai.com/). Much appreciated if you can check it out!
 
 ---
