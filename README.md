@@ -12,7 +12,7 @@
 
 ---
 
-![Last.FM Last Played Song](https://img.shields.io/endpoint?color=ef912f&logo=youtubemusic&label=LAST+PLAYED&style=for-the-badge&url=https://lastfm-last-played.biancarosa.com.br/brandonmai/latest-song?format=shields.io)
+![My scrobbles](https://lastfm-recently-played.vercel.app/api?user=brandonmai&count=1&header_style=compact_stats&footer_style=none&bg_color=555555&border_radius=0&loved=true&width=350)
 
 ![Hit Counter](https://komarev.com/ghpvc/?username=brandon-mai&color=ef912f&style=for-the-badge&label=VIEWS)
 [![Wakatime Hours Badge](https://wakatime.com/badge/user/137a1655-e7c3-4f3d-a00a-edb94e9bfcf3.svg?style=for-the-badge&color=ef912f)](https://wakatime.com/@brandonmai)
