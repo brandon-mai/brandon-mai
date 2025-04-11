@@ -1,16 +1,6 @@
-#### About Me
-- 🎵 Music lover.
-- 🩵 Avid Hololive fan.
-- 🍵 Heavy tea and coffee consumer.
-- 🏞 Grass toucher. I love being outside.
+![Banner](profile.svg)
 
-#### What I Do
-- 😎 Data Science | AI | experimenting with system and frontend dev.
-- 📚 Research topics that spark my curiosity.
-- 🛠️ Build questionable stuffs sometimes.
-- 💻 Blog at [my blog](https://vietbaomai.com/). Much appreciated if you can check it out!
-
----
+<!-- This image is automatically updated every 12 hours -->
 
 ![My scrobbles](https://lastfm-recently-played.vercel.app/api?user=brandonmai&count=1&header_style=compact_stats&footer_style=none&bg_color=555555&border_radius=0&loved=true&width=357)
 
