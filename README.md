@@ -1,4 +1,4 @@
-![Banner](banner.svg)
+<div><img src="banner.svg" width="100%"></div>
 
 <!-- This image is automatically updated every 12 hours -->
 
