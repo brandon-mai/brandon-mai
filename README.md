@@ -1,4 +1,4 @@
-![Banner](profile.svg)
+![Banner](banner.svg)
 
 <!-- This image is automatically updated every 12 hours -->
 
