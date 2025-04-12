@@ -53,7 +53,7 @@
     .area-title {
       font-weight: bold;
       font-size: 1.25rem;
-      padding-bottom: 0.75rem;
+      padding-bottom: 1rem;
       color: var(--title-color,rgb(24, 24, 24));
     }
 
