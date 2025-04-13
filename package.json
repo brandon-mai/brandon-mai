@@ -1,0 +1,26 @@
+{
+  "name": "github-profile-image-generator",
+  "version": "1.0.0",
+  "description": "Generate dynamic GitHub profile README image with Satori",
+  "main": "render-image.js",
+  "type": "module",
+  "scripts": {
+    "gen": "npx babel --plugins @babel/plugin-transform-react-jsx render-image.jsx -o render-image.js && node render-image.js",
+    "upd": "node update.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@types/react": "^19.1.0",
+    "@xmldom/xmldom": "^0.9.8",
+    "jsdom": "^26.0.0",
+    "node-fetch": "^3.3.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "satori": "^0.12.2",
+    "tw-to-css": "^0.0.12"
+  },
+  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
+}
