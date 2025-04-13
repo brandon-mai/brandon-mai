@@ -1,6 +1,52 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import satori from 'satori';
+
+const templatePath = 'banners/banner.svg';
+
+
+function svgToDoc(inputPath) {
+  const svgContent = fs.readFileSync(inputPath, 'utf8');
+  const parser = new DOMParser();
+  return parser.parseFromString(svgContent, 'image/svg+xml');
+}
+
+
+const fontUrl = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap';
+const fontResponse = await fetch(fontUrl);
+const cssText = await fontResponse.text();
+const fontFileUrl = cssText.match(/url\(([^)]+)\)/)?.[1];
+if (!fontFileUrl) {
+  throw new Error('Could not extract font URL from Google Fonts CSS');
+}
+const fontFileResponse = await fetch(fontFileUrl);
+const fontData = await fontFileResponse.arrayBuffer();
+const fontBuffer = await Promise.resolve(Buffer.from(fontData));
+
+
+async function saveSvg(outputPath, doc) {
+  const foreignObject = doc.getElementsByTagName('foreignObject')[0];
+  const width = foreignObject.getAttribute('width');
+  const height = foreignObject.getAttribute('height');
+
+  const serializer = new XMLSerializer();
+  const serialized = serializer.serializeToString(doc);
+  // const rerendered = await satori(serialized, {
+  //   width: parseInt(width),
+  //   height: parseInt(height),
+  //   fonts: [
+  //     {
+  //       name: 'Default',
+  //       data: fontBuffer,
+  //       weight: 400,
+  //       style: 'normal',
+  //     },
+  //   ],
+  // });
+  fs.writeFileSync(outputPath, serialized);
+}
+
 
 /**
  * Fetches current/latest track data from Last.fm
@@ -27,6 +73,7 @@ async function fetchLastFmData() {
     return null;
   }
 }
+
 
 /**
  * Converts external SVG or image to base64
@@ -65,25 +112,18 @@ async function imageToBase64(source, type = 'svg') {
   }
 }
 
+
 /**
- * Updates the SVG with track information
+ * Updates the SVG with track information, save in 2 themes
  * @param {Object} trackData - Music track data
  * @returns {Promise<void>}
  */
-async function updateMusicBanner(trackData) {
-  // Load SVG file
-  const svgPath = './banner.svg';
-  const svgContent = fs.readFileSync(svgPath, 'utf8');
-  
-  // Parse SVG as XML
-  const parser = new DOMParser();
-  const svgDoc = parser.parseFromString(svgContent, 'image/svg+xml');
+async function updateBanner(trackData) {
+  const svgDoc = svgToDoc(templatePath);
   
   // Get status icons
   const playIcon = await imageToBase64('public/now-playing.gif', 'gif');
   const pauseIcon = await imageToBase64('public/last-played.svg');
-  
-  // Update elements
   
   // 1. Album cover
   const coverImage = svgDoc.getElementById('image');
@@ -118,27 +158,33 @@ async function updateMusicBanner(trackData) {
   // 5. Artist name
   const artistElement = svgDoc.getElementById('artist');
   if (artistElement) {
-    artistElement.textContent = `by ${trackData.artist || 'Various artist'}`;
+    artistElement.textContent = trackData.artist || 'Various artist';
   }
   
   // 6. Album name
   const albumElement = svgDoc.getElementById('album');
   if (albumElement) {
-    albumElement.textContent = `on ${trackData.album || 'Various album'}`;
+    albumElement.textContent = trackData.album || 'Various album';
   }
-  
-  // Convert modified DOM back to string
-  const serializer = new XMLSerializer();
-  const updatedSvgContent = serializer.serializeToString(svgDoc);
-  
-  // Save the modified SVG
-  fs.writeFileSync('banner.svg', updatedSvgContent);
-  console.log('Music banner updated successfully.');
+
+  // Get the theme container
+  let themeContainer = svgDoc.getElementById('theme-container');
+  if (themeContainer) {
+    const currentClass = themeContainer.getAttribute('class') || '';
+
+    themeContainer.setAttribute('class', currentClass.replace(/light-theme|dark-theme/g, '').trim() + ' light-theme');
+    await saveSvg(templatePath.replace('.svg', '-light.svg'), svgDoc);
+
+    themeContainer.setAttribute('class', currentClass.replace(/light-theme|dark-theme/g, '').trim() + ' dark-theme');
+    await saveSvg(templatePath.replace('.svg', '-dark.svg'), svgDoc);
+  } else {
+    await saveSvg(templatePath, svgDoc);
+  }
+
+  console.log('Update banner successfully!');
 }
 
-/**
- * Main function
- */
+
 async function main() {
   try {
     const trackData = await fetchLastFmData();
@@ -146,10 +192,9 @@ async function main() {
       console.error('Failed to fetch track data. Exiting...');
       return;
     }
-    
-    await updateMusicBanner(trackData);
+    await updateBanner(trackData);
   } catch (error) {
-    console.error('Error updating music banner:', error);
+    console.error('Error updating banner:', error);
   }
 }
 

@@ -1,4 +1,12 @@
-<div><img src="banner.svg" width="100%"></div>
+<picture>
+  <source media="(min-width: 769px) and (prefers-color-scheme: light)" srcset="banners/banner-light.svg">
+
+  <source media="(max-width: 768px) and (prefers-color-scheme: light)" srcset="banners/banner-light.svg">
+
+  <source media="(max-width: 768px) and (prefers-color-scheme: dark)" srcset="banners/banner-dark.svg">
+
+  <img src="banners/banner-dark.svg" alt="" width="100%" title="Sketchy banner using SVG's foreignObject">
+</picture>
 
 <!-- This image is automatically updated every 12 hours -->
 
