@@ -8,11 +8,7 @@
   <img src="banners/banner-dark.svg" alt="" width="100%" title="Sketchy banner using SVG's foreignObject">
 </picture> -->
 
-<<<<<<< HEAD
 <div><img src="isolate.svg"></div>
-=======
-<div><img src="test.svg"></div>
->>>>>>> 94dbd4c81d167f04d9ef37bc5c2312146b4b82c3
 
 <!-- ![My scrobbles](https://lastfm-recently-played.vercel.app/api?user=brandonmai&count=1&header_style=compact_stats&footer_style=none&bg_color=555555&border_radius=0&loved=true&width=357) -->
 
