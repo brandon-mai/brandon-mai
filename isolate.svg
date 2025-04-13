@@ -102,20 +102,23 @@
     }
 
     .bae {
-      width:80%;
+      width:16rem;
       left:6.5rem;
+      rotate: -30deg;
     }
 
     .iroha {
-      width:80%;
+      width:16rem;
       left:6.5rem;
       top:5rem;
+      rotate: -35deg;
     }
 
     .bancho {
-      width:88%;
+      width:17rem;
       left:4.5rem;
       top:13rem;
+      rotate: -10deg;
     }
 
     .long-text {
