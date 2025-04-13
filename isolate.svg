@@ -102,18 +102,18 @@
     }
 
     .bae {
-      width:16rem;
+      width:80%;
       left:6.5rem;
     }
 
     .iroha {
-      width:16rem;
+      width:80%;
       left:6.5rem;
       top:5rem;
     }
 
     .bancho {
-      width:17rem;
+      width:88%;
       left:4.5rem;
       top:13rem;
     }
