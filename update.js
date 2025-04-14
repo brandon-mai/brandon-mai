@@ -28,16 +28,16 @@ function svgToDoc(inputPath) {
 }
 
 
-const fontUrl = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap';
-const fontResponse = await fetch(fontUrl);
-const cssText = await fontResponse.text();
-const fontFileUrl = cssText.match(/url\(([^)]+)\)/)?.[1];
-if (!fontFileUrl) {
-  throw new Error('Could not extract font URL from Google Fonts CSS');
-}
-const fontFileResponse = await fetch(fontFileUrl);
-const fontData = await fontFileResponse.arrayBuffer();
-const fontBuffer = await Promise.resolve(Buffer.from(fontData));
+// const fontUrl = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap';
+// const fontResponse = await fetch(fontUrl);
+// const cssText = await fontResponse.text();
+// const fontFileUrl = cssText.match(/url\(([^)]+)\)/)?.[1];
+// if (!fontFileUrl) {
+//   throw new Error('Could not extract font URL from Google Fonts CSS');
+// }
+// const fontFileResponse = await fetch(fontFileUrl);
+// const fontData = await fontFileResponse.arrayBuffer();
+// const fontBuffer = await Promise.resolve(Buffer.from(fontData));
 
 
 async function saveSvg(outputPath, doc) {

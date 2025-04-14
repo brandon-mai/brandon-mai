@@ -8,8 +8,6 @@
   <img src="banners/banner-dark.svg" alt="" width="100%" title="Sketchy banner using SVG's foreignObject">
 </picture>
 
-<!-- <div><img src="isolate.svg"></div> -->
-
 <!-- ![My scrobbles](https://lastfm-recently-played.vercel.app/api?user=brandonmai&count=1&header_style=compact_stats&footer_style=none&bg_color=555555&border_radius=0&loved=true&width=357) -->
 
 ![Hit Counter](https://komarev.com/ghpvc/?username=brandon-mai&color=ef912f&style=for-the-badge&label=VIEWS)
