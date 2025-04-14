@@ -3,7 +3,22 @@ import fetch from 'node-fetch';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import satori from 'satori';
 
-const templatePath = 'banners/banner.svg';
+
+async function main() {
+  const bannerPath = 'banners/banner.svg';
+  const bannerPathMobile = 'banners/banner-m.svg';
+  try {
+    const trackData = await fetchLastFmData();
+    if (!trackData) {
+      console.error('Failed to fetch track data. Exiting...');
+      return;
+    }
+    await updateBanner(bannerPath, trackData);
+    await updateBanner(bannerPathMobile, trackData);
+  } catch (error) {
+    console.error('Error updating banner:', error);
+  }
+}
 
 
 function svgToDoc(inputPath) {
@@ -115,11 +130,12 @@ async function imageToBase64(source, type = 'svg') {
 
 /**
  * Updates the SVG with track information, save in 2 themes
+ * @param {string} inputPath - Path to the SVG template
  * @param {Object} trackData - Music track data
  * @returns {Promise<void>}
  */
-async function updateBanner(trackData) {
-  const svgDoc = svgToDoc(templatePath);
+async function updateBanner(inputPath, trackData) {
+  const svgDoc = svgToDoc(inputPath);
   
   // Get status icons
   const playIcon = await imageToBase64('public/now-playing.gif', 'gif');
@@ -173,30 +189,17 @@ async function updateBanner(trackData) {
     const currentClass = themeContainer.getAttribute('class') || '';
 
     themeContainer.setAttribute('class', currentClass.replace(/light-theme|dark-theme/g, '').trim() + ' light-theme');
-    await saveSvg(templatePath.replace('.svg', '-light.svg'), svgDoc);
+    await saveSvg(inputPath.replace('.svg', '-light.svg'), svgDoc);
 
     themeContainer.setAttribute('class', currentClass.replace(/light-theme|dark-theme/g, '').trim() + ' dark-theme');
-    await saveSvg(templatePath.replace('.svg', '-dark.svg'), svgDoc);
+    await saveSvg(inputPath.replace('.svg', '-dark.svg'), svgDoc);
   } else {
-    await saveSvg(templatePath, svgDoc);
+    await saveSvg(inputPath, svgDoc);
   }
 
-  console.log('Update banner successfully!');
+  console.log(`Update banner ${inputPath} successfully!`);
 }
 
-
-async function main() {
-  try {
-    const trackData = await fetchLastFmData();
-    if (!trackData) {
-      console.error('Failed to fetch track data. Exiting...');
-      return;
-    }
-    await updateBanner(trackData);
-  } catch (error) {
-    console.error('Error updating banner:', error);
-  }
-}
 
 // Execute the script
 main().catch(console.error);

@@ -1,14 +1,14 @@
-<!-- <picture>
+<picture>
+  <source media="(max-width: 768px) and (prefers-color-scheme: light)" srcset="banners/banner-m-light.svg">
+
   <source media="(min-width: 769px) and (prefers-color-scheme: light)" srcset="banners/banner-light.svg">
 
-  <source media="(max-width: 768px) and (prefers-color-scheme: light)" srcset="banners/banner-light.svg">
-
-  <source media="(max-width: 768px) and (prefers-color-scheme: dark)" srcset="banners/banner-dark.svg">
+  <source media="(max-width: 768px) and (prefers-color-scheme: dark)" srcset="banners/banner-m-dark.svg">
 
   <img src="banners/banner-dark.svg" alt="" width="100%" title="Sketchy banner using SVG's foreignObject">
-</picture> -->
+</picture>
 
-<div><img src="isolate.svg"></div>
+<!-- <div><img src="isolate.svg"></div> -->
 
 <!-- ![My scrobbles](https://lastfm-recently-played.vercel.app/api?user=brandonmai&count=1&header_style=compact_stats&footer_style=none&bg_color=555555&border_radius=0&loved=true&width=357) -->
 
