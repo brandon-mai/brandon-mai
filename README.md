@@ -1,11 +1,11 @@
 <picture>
-  <source media="(max-width: 768px) and (prefers-color-scheme: light)" srcset="banners/banner-m-light.svg">
+  <source media="(max-width: 768px) and (prefers-color-scheme: light)" srcset="banners/banner-v2.svg">
 
-  <source media="(min-width: 769px) and (prefers-color-scheme: light)" srcset="banners/banner-light.svg">
+  <source media="(min-width: 769px) and (prefers-color-scheme: light)" srcset="banners/banner-v2.svg">
 
-  <source media="(max-width: 768px) and (prefers-color-scheme: dark)" srcset="banners/banner-m-dark.svg">
+  <source media="(max-width: 768px) and (prefers-color-scheme: dark)" srcset="banners/banner-v2.svg">
 
-  <img src="banners/banner-dark.svg" alt="" width="100%" title="Sketchy banner using SVG's foreignObject">
+  <img src="banners/banner-v2.svg" alt="" width="100%" title="Sketchy banner using SVG's foreignObject">
 </picture>
 
 <!-- ![My scrobbles](https://lastfm-recently-played.vercel.app/api?user=brandonmai&count=1&header_style=compact_stats&footer_style=none&bg_color=555555&border_radius=0&loved=true&width=357) -->
