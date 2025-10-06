@@ -1,3 +1,5 @@
+<img src="public/tako-hacker.gif" alt="Tako Hacker" style="max-width: 100%; display: block; margin: 0 auto 6;">
+
 <picture>
   <source media="(max-width: 768px) and (prefers-color-scheme: light)" srcset="banners/banner-v2-light.svg">
 
