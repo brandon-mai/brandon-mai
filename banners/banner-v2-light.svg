@@ -67,7 +67,7 @@
       position: absolute;
       white-space: nowrap;
       will-change: transform;
-      animation: marquee 15s linear infinite;
+      animation: marquee 10s linear infinite;
     }
 
     @keyframes marquee {
@@ -117,7 +117,7 @@
       <div class="marquee">
         <div>
           <div>
-            &#xA0;<i class="icon sunglasses"/> Data Science &amp; AI | <i class="icon musical-note"/> Scrobbler | <i class="icon hot-beverage"/> Heavy tea and coffee consumer | <i class="icon hololive"/> Holofan | <i class="icon sunglasses"/> Data Science &amp; AI | <i class="icon musical-note"/> Scrobbler | <i class="icon hot-beverage"/> Heavy tea and coffee consumer | <i class="icon hololive"/> Holofan |
+            &#xA0;<i class="icon brain"/> Main DS&amp;AI | <i class="icon musical-note"/> Music in BG right now | <i class="icon hololive"/> Holofan | <i class="icon brain"/> Main DS&amp;AI | <i class="icon musical-note"/> Music in BG right now | <i class="icon hololive"/> Holofan |
           </div>
         </div>
       </div>
